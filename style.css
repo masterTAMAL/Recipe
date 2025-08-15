@@ -1,0 +1,139 @@
+   body {
+        font-family: 'Poppins', sans-serif;
+        background:linear-gradient(135deg,#ffecd2,#fcb69f);
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .recipe-card {
+        background: #fff;
+        max-width: 350px;
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        animation: fadeIn 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recipe-header {
+        position: relative;
+    }
+
+    .recipe-header img {
+        width: 100%;
+        display: block;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .recipe-title {
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        animation: slideUp 1s ease-in-out;
+    }
+
+    .recipe-body {
+        padding: 15px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prep-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    button {
+        background: #ff7043;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 4px 0;
+        transition: background 0.3s ease;
+        font-size: 0.9rem;
+    }
+
+    button:hover {
+        background: #ff5722;
+    }
+
+    ul, ol {
+        padding-left: 18px;
+        margin-top: 8px;
+    }
+
+    li {
+        margin-bottom: 6px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    li:hover {
+        color: #ff5722;
+        transform: translateX(5px);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .highlight {
+        background: #fff3e0;
+        padding: 4px;
+        border-radius: 5px;
+    }
+
+    /* Progress Bar */
+    .progress-container {
+        background: #ddd;
+        height: 6px;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 10px 0;
+    }
+
+    .progress-bar {
+        background: #ff7043;
+        width: 0%;
+        height: 6px;
+        transition: width 0.5s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes slideUp {
+        from {transform: translateY(20px); opacity: 0;}
+        to {transform: translateY(0); opacity: 1;}
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        body {
+            flex-direction: column;
+            align-items: center;
+        }
+        .recipe-card {
+            max-width: 100%;
+        }
+    }
